@@ -20,25 +20,27 @@
 
 /* Todo 2.1: Define and apply CSS styles such that the background of .change-styles changes to
 a different color when the screen is smaller than 500px*/
-
-@media screen and (min-width: 499px) {
+.change-styles{
+    width: 100%;
+    height: 300px;
+    background-color: red;}
+@media (max-width: 500px) {
     .change-styles{
-        width: 100%;
-        height: 300px;
-        background-color: red;
+        background-color: blue;
     }
 }
 
 
 /* Todo 2.2: Define and apply CSS styles such that the layout of .change-layout becomes a column
 when the screen's width is smaller than 500px */
-@media screen {
+.change-layout{
+    display: flex;
+    flex-direction: row;}
+@media (max-width: 500px) {
     .change-layout{
-        display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 }
-
 
 
 /* Todo 2.3: Define the common breakpoints for devices - phone, tablet, small screens (laptop), and large screens (desktops).
@@ -48,4 +50,28 @@ For each break point, the background of .common-breakpoints must change
     width: 100%;
     height: 300px;
     background-color: blue;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .common-breakpoints{
+        background-color: black;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768x) {
+    .common-breakpoints{
+        background-color: brown;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+    .common-breakpoints{
+        background-color: blanchedalmond;
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1920px) {
+    .common-breakpoints{
+        background-color: burlywood;
+    }
 }
